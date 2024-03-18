@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+</head>
+<body>
+    <h1>Form Submission</h1>
+    <form action="/submit" method="post">
+        <label for="ip-addres">ip-addres:</label><br>
+        <input type="text" id="ip-addres" name="ip-addres"><br>
+        <label for="passwrod">passwrod:</label><br>
+        <input type="passwrod" id="passwrod" name="passwrod"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+    <a href="/data">View Data</a>
+</body>
+</html>
