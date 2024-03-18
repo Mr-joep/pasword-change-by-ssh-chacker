@@ -19,9 +19,9 @@ def stop_script(process):
 def main_menu(process1, process2, process3):
     while True:
         print("Running Scripts:")
-        print("1. Script 1 -", "Running" if process1.poll() is None else "Stopped")
-        print("2. Script 2 -", "Running" if process2.poll() is None else "Stopped")
-        print("3. Script 3 -", "Running" if process3.poll() is None else "Stopped")
+        print("1. ssh checker -", "Running" if process1.poll() is None else "Stopped")
+        print("2. ip remover -", "Running" if process2.poll() is None else "Stopped")
+        print("3. website -", "Running" if process3.poll() is None else "Stopped")
         print("0. Exit")
 
         choice = input("Enter the number of the action to perform: ")
@@ -29,24 +29,24 @@ def main_menu(process1, process2, process3):
         if choice == "1":
             if process1.poll() is None:
                 stop_script(process1)
-                print("Script 1 has been stopped.")
+                print("ssh checker has been stopped.")
             else:
                 process1 = start_script(script1_path)
-                print("Script 1 has been started.")
+                print("ssh checker has been started.")
         elif choice == "2":
             if process2.poll() is None:
                 stop_script(process2)
-                print("Script 2 has been stopped.")
+                print("ip remover has been stopped.")
             else:
                 process2 = start_script(script2_path)
-                print("Script 2 has been started.")
+                print("ip remover has been started.")
         elif choice == "3":
             if process3.poll() is None:
                 stop_script(process3)
-                print("Script 3 has been stopped.")
+                print("website has been stopped.")
             else:
                 process3 = start_script(script3_path)
-                print("Script 3 has been started.")
+                print("website has been started.")
         elif choice == "0":
             break
         else:
